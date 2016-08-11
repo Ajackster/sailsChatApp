@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat App</title>
+        <link rel="stylesheet" href="/styles/chat.css" />
+    </head>
+    <body ng-app="chatApp" ng-controller="ChatController">
+        <div class="chat-body">
+            <div class="message" ng-repeat="chat in chatList | orderBy:predicate:reverse | limitTo: 10">
+                <b>{{ chat.user }}: </b><p>{{ chat.message }}</p>
+            </div>
+        </div>
+        <form>
+            <input type="text" ng-model="user" class="chat-user-input" placeholder="Type your name here" />
+            
+            <div class="chat-input-container">
+                <input type="text" ng-model="message" class="chat-message-input" placeholder="What would you like to say?" />
+                <button class="submit-button" ng-click="sendMessage()">Send</button>
+            </div>
+        </form>
+        <script type="text/javascript" src="/js/dependencies/sails.io.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script type="text/javascript" src="/js/chatAppController.js"></script>
+    </body>
+</html>
