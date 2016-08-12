@@ -44,4 +44,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'get /login': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/login.html');
+  },
+  'get /signup': function(req, res, next) {
+    res.sendfile(sails.config.appPath + '/assets/signup.html');
+  },
+  'post /login' : 'AuthController.login',
+  'logout' : 'AuthController.logout'
 };

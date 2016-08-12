@@ -11,8 +11,8 @@
             </div>
         </div>
         <form>
-            <input type="text" ng-model="user" class="chat-user-input" placeholder="Type your name here" />
-            
+            <input required type="text" ng-model="user" class="chat-user-input" id="user-input" placeholder="Type your name here" />
+
             <div class="chat-input-container">
                 <input type="text" ng-model="message" class="chat-message-input" placeholder="What would you like to say?" />
                 <button class="submit-button" ng-click="sendMessage()">Send</button>

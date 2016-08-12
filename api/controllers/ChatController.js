@@ -16,13 +16,13 @@ module.exports = {
                     message: dataFromClient.message,
                     user: dataFromClient.user
                 });
-            });    
+            });
         } else if (req.isSocket) {
             var data = req.params.all();
             Chat.watch(req.socket);
             console.log('User subscribed to ' + req.socket.id);
             console.log(data);
         }
-    }	
+    }
 };
 
