@@ -1,4 +1,7 @@
 html, body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
     padding: 0;
@@ -7,19 +10,27 @@ html, body {
 }
 
 .chat-body {
-    width: 100%;
+    width: 99%;
     height: 90%;
+    margin: 10px;
+    border: 3px solid orange;
+    background: #2b81af;
 }
 
 .message {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
     border-bottom: 1px solid #f8f8f8;
 }
 
 .message b {
+    color: #FFFFFF;
     margin-right: 10px;
+}
+
+.message p {
+  color: #FFFFFF;
 }
 
 form {
@@ -30,27 +41,36 @@ form {
 }
 
 form .chat-user-input {
-    width: 20%;
+    width: 20vw;
     height: 40px;
-    border: 1px solid #686868;
-    margin: 0 20px;
+    border: none;
+    border-bottom: 1px solid #2b81af;
+    margin-left: 10px;
     padding: 0 20px;
+    outline: none;
+}
+
+form .chat-user-input:invalid {
+  outline: none;
 }
 
 form .chat-input-container {
-    width: 80%;
+    margin-left: auto;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 
 form .chat-input-container .chat-message-input {
-    width: 90%;
-    height: 42px;
-    border: 1px solid #686868;
+    width: 60vw;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #2b81af;
     padding: 0 20px;
 }
 
 form .chat-input-container .submit-button {
     width: 60px;
-    height: 40px;
+    height: 42px;
     border: 1px solid orange;
     background-color: orange;
     color: #FFFFFF;
